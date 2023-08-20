@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<!-- 
+    Author: Cody Skelton
+    Email: codysskelton@gmail.com
+    Date: 08.20.2023
+-->
+
+<html lang="en">
+    <head>
+        <title>WEB 231 - Exercise 2.2</title>
+        <meta charset="utf-8">
+        <link href="../site.css" rel="stylesheet" type="text/css">
+    <body>
+        <div id="container">
+            <h1>Exercise 2.2 - Hello JavaScript</h1>
+
+            <button type="button" onclick="myFunction()" id="btnMyCourse">What course am I taking?</button>
+
+            <p id="txtMyWorld"></p>
+
+            <a href="../index.html" class="return-home">Return</a>
+
+            <script>
+                document.getElementById("txtMyWorld").innerHTML = "You are now in Skelton's world!";
+
+                function myFunction() {
+                    alert("WEB 231 - Enterprise JavaScript I");
+                }
+            </script>
+        </div>
+    </body>
+</html>
