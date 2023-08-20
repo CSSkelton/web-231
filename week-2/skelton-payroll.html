@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link href="skelton-payroll.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1 id="payroll-header">Payroll System</h1>
+
+        <h3>Employee record 1</h3>
+        <ul>
+            <li id="txtFirstNameLudwig"></li>
+            <li id="txtLastNameLudwig"></li>
+            <li id="txtAddressLudwig"></li>
+            <li id="txtHireDateLudwig"></li>
+            <li id="txtPayRateLudwig"></li>
+        </ul>
+
+        <h3>Employee record 2</h3>
+        <ul>
+            <li id="txtFirstNameJohann"></li>
+            <li id="txtLastNameJohann"></li>
+            <li id="txtAddressJohann"></li>
+            <li id="txtHireDateJohann"></li>
+            <li id="txtPayRateJohann"></li>
+        </ul>
+
+        <h3>Employee record 3</h3>
+        <ul>
+            <li id="txtFirstNameWolfgang"></li>
+            <li id="txtLastNameWolfgang"></li>
+            <li id="txtAddressWolfgang"></li>
+            <li id="txtHireDateWolfgang"></li>
+            <li id="txtPayRateWolfgang"></li>
+        </ul>
+
+        <a href="../index.html">Return</a>
+
+        <script>
+            // Declare and assign variables
+            let txtFirstNameLudwig = "Ludwig";
+            let txtLastNameLudwig = "Beethoven";
+            let txtAddressLudwig = "505 main street";
+            let txtHireDateLudwig = new Date().toLocaleDateString("en-US");
+            let txtPayRateLudwig = 18.9.toFixed(1);
+
+            let txtFirstNameJohann = "Johann";
+            let txtLastNameJohann = "Bach";
+            let txtAddressJohann = "512 main street";
+            let txtHireDateJohann = new Date().toLocaleDateString("en-US");
+            let txtPayRateJohann = 25.5.toFixed(1);
+
+            let txtFirstNameWolfgang = "Wolfgang";
+            let txtLastNameWolfgang = "Mozart";
+            let txtAddressWolfgang = "600 main street";
+            let txtHireDateWolfgang = new Date().toLocaleDateString("en-US");
+            let txtPayRateWolfgang = 50.1.toFixed(1);
+            
+            // Bind variables to HTML element
+            document.getElementById("txtFirstNameLudwig").innerHTML = txtFirstNameLudwig;
+            document.getElementById("txtLastNameLudwig").innerHTML = txtLastNameLudwig;
+            document.getElementById("txtAddressLudwig").innerHTML = txtAddressLudwig;
+            document.getElementById("txtHireDateLudwig").innerHTML = txtHireDateLudwig;
+            document.getElementById("txtPayRateLudwig").innerHTML = txtPayRateLudwig;
+
+            document.getElementById("txtFirstNameJohann").innerHTML = txtFirstNameJohann;
+            document.getElementById("txtLastNameJohann").innerHTML = txtLastNameJohann;
+            document.getElementById("txtAddressJohann").innerHTML = txtAddressJohann;
+            document.getElementById("txtHireDateJohann").innerHTML = txtHireDateJohann;
+            document.getElementById("txtPayRateJohann").innerHTML = txtPayRateJohann;
+
+            document.getElementById("txtFirstNameWolfgang").innerHTML = txtFirstNameWolfgang;
+            document.getElementById("txtLastNameWolfgang").innerHTML = txtLastNameWolfgang;
+            document.getElementById("txtAddressWolfgang").innerHTML = txtAddressWolfgang;
+            document.getElementById("txtHireDateWolfgang").innerHTML = txtHireDateWolfgang;
+            document.getElementById("txtPayRateWolfgang").innerHTML = txtPayRateWolfgang;
+        </script>
+    </body>
+</html>

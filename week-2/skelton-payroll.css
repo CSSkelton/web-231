@@ -1,0 +1,6 @@
+@import url(../site.css);
+@import url(../global.css);
+
+ul {
+    border: dotted 1px red;
+}
