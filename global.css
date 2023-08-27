@@ -79,3 +79,7 @@
 #container {
     padding: 10px;
 }
+
+.app-header {
+    text-align: center;
+}
