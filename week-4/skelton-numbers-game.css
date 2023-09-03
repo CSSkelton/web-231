@@ -1,0 +1,11 @@
+@import url(../global.css);
+
+#card-container {
+    width: 600px;
+    margin: 3% auto 0;
+}
+
+#txtResults {
+    text-align: center;
+    font-size: 28px;
+}

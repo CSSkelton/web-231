@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WEB 231 - Enterprise JavaScript I</title>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link href="skelton-numbers-game.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <div id="container">
+            <h1 class="app-header">Welcome to the numbers game!</h1>
+
+            <div id="card-container">
+                <div id="input" class="card">
+                    <div class="card-title">Pick a number between 1 and 10</div>
+                    <div class="card-content">
+                        <div class="form">
+                            <div class="form-field">
+                                <label for="txtMyNumber">Guess the number: </label>
+                                <input type="text" id="txtMyNumber" name="txtMyNumber" class="input">
+                            </div>
+
+                            <div class="form-field">
+                                <button class="btn btn-primary full-width" id="btnSubmit" onclick=randomGuessCompare()>Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="results" class="card">
+                    <div class="card-title">Results</div>
+                    <div class="card-content" id="txtResults"> </div>
+                </div>
+
+                <a href="../index.html" class="return-home">Return</a>
+            </div>
+
+            
+        </div>
+
+        <script>
+            function randomGuessCompare() {
+                let myNumber = document.getElementById("txtMyNumber").value;
+                const rnd = Math.floor((Math.random() * 10) + 1);
+                let result;
+
+                if (myNumber > rnd) {
+                    result = "The number is less than " + myNumber;
+                } else if (myNumber < rnd) {
+                    result = "The number is greater than " + myNumber;
+                } else {
+                    result = "Congratulations! You picked the correct number!";
+                }
+
+                document.getElementById("txtResults").innerHTML = result;
+            }
+        </script>
+    </body>
+
+</html>
