@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>WEB 231 - Enterprise JavaScript I</title>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link href="skelton-in-n-out-books.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <div id="container">
+            <h1 class="app-header">Welcome to In-N-Out-Books</h1>
+
+            <div id="card-container">
+                <div id="input" class="card">
+                    <div class="card-title">My Favorites</div>
+                    <div class="card-content">
+                        <div class="form">
+                            <div class="form-field">
+                                <label for="favoriteList">Choose a listing: </label>
+                                <select id="favoriteList" name="favoriteList" class="drop-down-menu">
+                                    <option value="select">--Select--</option>
+                                    <option value="books">Top 3 Favorite Books</option>
+                                    <option value="authors">Top 3 Favorite Authors</option>
+                                </select> 
+                            </div>
+
+                            <div class="form-field">
+                                <button class="btn btn-primary full-width" id="btnDisplayListing" onclick="displayListing()">Display Listing</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="results" class="card">
+                    <h1 class="card-title" id="listingResultsTitle"> </h1>
+                    <div class="card-content" id="favorite-books">
+                        <table>
+                            <tr>
+                                <th>ISBN</th>
+                                <th>Title</th>
+                                <th>Pages</th>
+                            </tr>
+                            <tr>
+                                <td id="txtEragonISBN"></td>
+                                <td id="txtEragonTitle"></td>
+                                <td id="txtEragonPages"></td>
+                            </tr>
+                            <tr>
+                                <td id="txtSonOfNeptuneISBN"></td>
+                                <td id="txtSonOfNeptuneTitle"></td>
+                                <td id="txtSonOfNeptunePages"></td>
+                            </tr>
+                            <tr>
+                                <td id="txtTheHobbitISBN"></td>
+                                <td id="txtTheHobbitTitle"></td>
+                                <td id="txtTheHobbitPages"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="card-content" id="favorite-authors">
+                        <table>
+                            <tr>
+                                <th>Name</th>
+                                <th>Genre</th>
+                            </tr>
+                            <tr>
+                                <td id="txtChristopherPaoliniName"></td>
+                                <td id="txtChristopherPaoliniGenre"></td>
+                            </tr>
+                            <tr>
+                                <td id="txtRickRiordanName"></td>
+                                <td id="txtRickRiordanGenre"></td>
+                            </tr>
+                            <tr>
+                                <td id="txtJRRTolkienName"></td>
+                                <td id="txtJRRTolkienGenre"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <a href="../index.html" class="return-home">Return</a>
+            </div>
+        </div>
+
+        <script>
+            let books = document.getElementById("favorite-books");
+            let authors = document.getElementById("favorite-authors");
+
+            const eragon = {
+                    isbn: "978-0375826689",
+                    title: "Eragon",
+                    pages: 528
+            };
+            const sonOfNeptune = {
+                isbn: "978-1423140597",
+                title: "The Son of Neptune",
+                pages: 544
+            };
+            const theHobbit = {
+                isbn: "978-0395873465",
+                title: "The Hobbit",
+                pages: 304
+            };
+
+            const paolini = {
+                name: "Christopher Paolini",
+                genre: "Fantasy"
+            };
+            const riordan = {
+                name: "Rick Riordan",
+                genre: "Fantasy"
+            };
+            const tolkien = {
+                name: "J.R.R. Tolkien",
+                genre: "Fantasy"
+            };
+
+            document.getElementById("txtEragonISBN").innerHTML = eragon.isbn;
+            document.getElementById("txtEragonTitle").innerHTML = eragon.title;
+            document.getElementById("txtEragonPages").innerHTML = eragon.pages;
+
+            document.getElementById("txtSonOfNeptuneISBN").innerHTML = sonOfNeptune.isbn;
+            document.getElementById("txtSonOfNeptuneTitle").innerHTML = sonOfNeptune.title;
+            document.getElementById("txtSonOfNeptunePages").innerHTML = sonOfNeptune.pages;
+
+            document.getElementById("txtTheHobbitISBN").innerHTML = theHobbit.isbn;
+            document.getElementById("txtTheHobbitTitle").innerHTML = theHobbit.title;
+            document.getElementById("txtTheHobbitPages").innerHTML = theHobbit.pages;
+
+            document.getElementById("txtChristopherPaoliniName").innerHTML = paolini.name;
+            document.getElementById("txtChristopherPaoliniGenre").innerHTML = paolini.genre;
+
+            document.getElementById("txtRickRiordanName").innerHTML = riordan.name;
+            document.getElementById("txtRickRiordanGenre").innerHTML = riordan.genre;
+
+            document.getElementById("txtJRRTolkienName").innerHTML = tolkien.name;
+            document.getElementById("txtJRRTolkienGenre").innerHTML = tolkien.genre;
+
+            books.style.display = "none";
+            authors.style.display = "none";
+
+            function displayListing() {
+                resultsTitle = document.getElementById("listingResultsTitle");
+                
+                let choice = document.getElementById("favoriteList").value;                
+
+                if (choice === "books") {
+                    resultsTitle.innerHTML = "Top 3 Favorite Books";
+                    authors.style.display = "none";
+                    books.style.display = "block";
+                } else if (choice === "authors") {
+                    resultsTitle.innerHTML = "Top 3 Favorite Authors";
+                    books.style.display = "none";
+                    authors.style.display = "block";
+                } else {
+                    resultsTitle.style.display = "none";
+                    books.style.display = "none";
+                    authors.style.display = "none";
+                    window.alert("Invalid selection, please try again!");
+                }
+            }
+        </script>
+    </body>
+</html>
