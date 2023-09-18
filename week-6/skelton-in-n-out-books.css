@@ -15,7 +15,7 @@ th {
 }
 
 th, td {
-    border: 1px solid color(#ddd);
+    border: 1px solid #ddd;
 }
 
 tr:hover {
