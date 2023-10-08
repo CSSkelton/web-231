@@ -1,0 +1,17 @@
+@import url(../global.css);
+
+img {
+    max-width: 2.5%;
+}
+
+.player-card {
+    text-align: center;
+    height: 100px;
+}
+
+#player-card-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+    grid-gap: 10px;
+}
